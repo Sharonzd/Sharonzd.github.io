@@ -1,0 +1,6 @@
+{
+  "name": "Scufe",
+  "tagline": "scu fe",
+  "body": "# 已建立分支，可以开始做任务啦。大家加油哦!\r\npull这个工程后切换到自己的名字对应的分支，然后push到分支上。\r\n大家review之后再merge到master上。\r\n以任务名来命名文件或文件夹，如task1.html\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
