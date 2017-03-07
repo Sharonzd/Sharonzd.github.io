@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, 前端, 周丹" />
+  <meta name="keywords" content="前端知识集锦," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="热爱生活与前端">
+<meta name="description" content="前端开发的几年中, 遇到了各种大大小小的坑, 不记录下来便会时常忘记时常再犯, 于是老老实实的无论大小的错误都记录了下来, 现在特地分享出来, 希望能对大家也有所帮助。此篇为HTML篇。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端错题本集锦之HTML篇">
 <meta property="og:url" content="http://sharonzd.github.io/2017/03/07/前端错题本集锦之HTML篇/index.html">
 <meta property="og:site_name" content="Sharon_zd">
-<meta property="og:description" content="热爱生活与前端">
-<meta property="og:updated_time" content="2017-03-07T10:25:26.000Z">
+<meta property="og:description" content="前端开发的几年中, 遇到了各种大大小小的坑, 不记录下来便会时常忘记时常再犯, 于是老老实实的无论大小的错误都记录了下来, 现在特地分享出来, 希望能对大家也有所帮助。此篇为HTML篇。">
+<meta property="og:updated_time" content="2017-03-07T11:03:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端错题本集锦之HTML篇">
-<meta name="twitter:description" content="热爱生活与前端">
+<meta name="twitter:description" content="前端开发的几年中, 遇到了各种大大小小的坑, 不记录下来便会时常忘记时常再犯, 于是老老实实的无论大小的错误都记录了下来, 现在特地分享出来, 希望能对大家也有所帮助。此篇为HTML篇。">
 
 
 
@@ -295,6 +295,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端笔试/" itemprop="url" rel="index">
+                    <span itemprop="name">前端笔试</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -333,7 +352,18 @@
       
 
       
-        
+        <p>前端开发的几年中, 遇到了各种大大小小的坑, 不记录下来便会时常忘记时常再犯, 于是老老实实的无论大小的错误都记录了下来, 现在特地分享出来, 希望能对大家也有所帮助。此篇为HTML篇。</p>
+<a id="more"></a>
+<ol>
+<li><p>viewport的meta标签，使得width=device-width会基于不同设备宽度进行展现</p>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+</li>
+<li><p>页面的性能问题<br> a. 加很多class会增加dom树的大小，会降低页面的渲染速度，降低js取元素时遍历树的效率；<br> b. 但是不用class，用标签的层级关系查找的话又会增加开发时增加需求时页面结构改变的风险，这一点需要权衡。<br> c. 还有页面元素唯一的时候，应该用id，能用id就用id，也可以增加性能；<br> d. 但如果是控件就不要用id，因为一个页面可能会有多个</p>
+</li>
+<li><p>精简页面无意义元素：一般分割线都用border实现；一般辅助性元素都用before或after</p>
+</li>
+</ol>
+
       
     </div>
 
@@ -374,18 +404,28 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/前端知识集锦/" rel="tag">#前端知识集锦</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/05/interview-2015-media/" rel="next" title="前端笔试面试系列之三----2015美的前端笔试">
-                <i class="fa fa-chevron-left"></i> 前端笔试面试系列之三----2015美的前端笔试
+              <a href="/2017/03/07/前端错题本集锦之JavaScript篇/" rel="next" title="前端错题本集锦之JS篇">
+                <i class="fa fa-chevron-left"></i> 前端错题本集锦之JS篇
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/07/前端错题本集锦之CSS篇/" rel="prev" title="前端错题本集锦之CSS篇">
+                前端错题本集锦之CSS篇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -457,7 +497,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -474,7 +514,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
