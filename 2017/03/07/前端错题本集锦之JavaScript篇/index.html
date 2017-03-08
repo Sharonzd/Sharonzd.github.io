@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。">
+<meta name="description" content="从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇、Vue篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端错题本集锦之JS篇">
 <meta property="og:url" content="http://sharonzd.github.io/2017/03/07/前端错题本集锦之JavaScript篇/index.html">
 <meta property="og:site_name" content="Sharon_zd">
-<meta property="og:description" content="从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。">
-<meta property="og:updated_time" content="2017-03-07T11:03:15.000Z">
+<meta property="og:description" content="从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇、Vue篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。">
+<meta property="og:updated_time" content="2017-03-08T07:10:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端错题本集锦之JS篇">
-<meta name="twitter:description" content="从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。">
+<meta name="twitter:description" content="从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇、Vue篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。">
 
 
 
@@ -352,7 +352,7 @@
       
 
       
-        <p>从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。</p>
+        <p>从中学时就养成了用错题本收集错题的习惯, 即便工作了也一直沿用至今, 所以打算写一个系列文章, 将平时前端开发中遇到的坑或者小知识点分享出来, 希望能对大家也有所帮助。知识点杂多, 暂且粗略的分类为HTML篇、JavaScript篇、CSS篇、Vue篇, 待以后不断扩充之后再做更细致的分类。此篇为其中的JS篇。</p>
 <a id="more"></a>
 <ol>
 <li><p>绑定事件的时候，元素还没有渲染出来，无法获取到，就会导致元素无法正确绑定事件。<br>解决办法：使用点击事件的代理<br>代码：$(‘body’).on(‘click’,’element’,function(){execute})<br>ready只是页面dom的加载，如果有些元素是通过模板异步获取的，ready就不管用了。直接给元素绑定的时候，元素还没有生成，事件就绑定不上，如果用body来代理，给body绑定点击事件，点击body的时候，检查点击的具体目标是不是element，是就执行。</p>
@@ -437,6 +437,33 @@ iii. new String(&apos;foo&apos;) == &apos;foo&apos;  //true
 </ol>
 </li>
 </ol>
+<ol>
+<li><p>通过页面或者url参数传过来的数字如果需要用,需要手动使用+或者parseInt()转换为数字,其中+更高效。</p>
+</li>
+<li><p>es6的import是singleton模式，如果import两次，只会执行一次。</p>
+</li>
+<li><p>npm install fecs -g 安装代码检查工具，本地检查代码风格</p>
+</li>
+<li><p>jq的多个事件绑定写法：<br>on({<br>“click”:function(){},<br>“scroll”:function(){}<br>})</p>
+</li>
+<li><p>选出特定dom绑定点击事件的两种处理方式</p>
+<ol>
+<li>通过stoppogation</li>
+<li>判断event.target</li>
+</ol>
+</li>
+<li><p>new Date() - ‘毫秒数时间戳’（字符串或者数字） //  毫秒数时间戳   // 默认会把new Date()转化为time<br>但是  new Date() + ‘毫秒数时间戳’ // 字符串拼接</p>
+</li>
+</ol>
+<ul>
+<li>new Date() // 1488954511789new Date().toString()     //  “Wed Mar 08 2017 14:28:18 GMT+0800 (CST)”</li>
+</ul>
+<ol>
+<li><p>不涉及到具体时分秒的时间戳的比较，可以将时间转化为当天0点的时间戳，以保证后面计算和对比的准确性</p>
+</li>
+<li><p>轮播式的左右移动页面的方式有很多，如absolute且动态修改left值，如动态修改margin-left</p>
+</li>
+</ol>
 
       
     </div>
@@ -489,16 +516,16 @@ iii. new String(&apos;foo&apos;) == &apos;foo&apos;  //true
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/05/interview-2015-media/" rel="next" title="前端笔试面试系列之三----2015美的前端笔试">
-                <i class="fa fa-chevron-left"></i> 前端笔试面试系列之三----2015美的前端笔试
+              <a href="/2017/03/07/前端错题本集锦之Vue篇/" rel="next" title="前端错题本集锦之JS篇">
+                <i class="fa fa-chevron-left"></i> 前端错题本集锦之JS篇
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/07/前端错题本集锦之HTML篇/" rel="prev" title="前端错题本集锦之HTML篇">
-                前端错题本集锦之HTML篇 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/07/前端错题本集锦之CSS篇/" rel="prev" title="前端错题本集锦之CSS篇">
+                前端错题本集锦之CSS篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -571,7 +598,7 @@ iii. new String(&apos;foo&apos;) == &apos;foo&apos;  //true
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
